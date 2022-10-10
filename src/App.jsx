@@ -1,11 +1,15 @@
-function App() {
-  return (
-    <div className="App">
-      <h1 className="text-3xl font-bold text-center">
-        Hello world!
-      </h1>
-    </div>
-  )
-}
+/*
+* You can say this is the App.js file
+*/
 
-export default App
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { RouterProvider } from 'react-router-dom';
+import './index.css';
+import { router } from './routes/routes';
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <RouterProvider router={router} />
+  </React.StrictMode>
+);
