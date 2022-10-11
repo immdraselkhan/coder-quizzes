@@ -3,7 +3,7 @@
 * allTopics data coming route loader then sending to all components using ContextAPI (TopicsContext)
 */
 
-import React, { createContext } from 'react'
+import React, { createContext } from 'react';
 import { Outlet, useLoaderData } from 'react-router-dom';
 import Footer from '../components/Footer';
 import Header from '../components/Header/Header';

@@ -1,15 +1,16 @@
 /*
 * Creating all routes here
-* allTopics comming from getQuizzes.js then sending to Main component
+* allTopics coming from getData.js then sending to Main component
+* topicQuiz coming from getData.js then sending to Quiz component
 */
 
 import { createBrowserRouter } from 'react-router-dom';
 import Blog from '../components/Blog';
 import Home from '../components/Home';
-import Quiz from '../components/Quiz';
+import Quiz from '../components/Quiz/Quiz';
 import Statistics from '../components/Statistics';
 import Main from '../layouts/Main';
-import { allTopics } from '../loaders/getTopics';
+import { allTopics, topicQuiz } from '../loaders/getData';
 
 export const router = createBrowserRouter([
   {
@@ -28,6 +29,11 @@ export const router = createBrowserRouter([
       {
         path: 'quiz',
         element: <Quiz />
+      },
+      {
+        path: 'quiz/:topicId',
+        element: <Quiz />,
+        loader: ({params}) => topicQuiz(`${params.topicId}`),
       },
       {
         path: 'statistics',
