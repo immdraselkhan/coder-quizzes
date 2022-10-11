@@ -14,6 +14,10 @@ export const router = createBrowserRouter([
     element: <Main />,
     children: [
       {
+        path: '/',
+        element: <Home />
+      },
+      {
         path: 'topics',
         element: <Home />,
       },
