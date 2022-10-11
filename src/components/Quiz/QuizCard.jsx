@@ -10,7 +10,7 @@ const QuizCard = ({everyQuestion, index}) => {
         <p className="text-lg font-medium leading-8">Quiz {index+1}: {`${question.replace(/[<p></p>]/g, '')}`}</p>
         <EyeIcon className="h-10 w-10 cursor-pointer"/>
       </div>
-      { options.map(option => <QuizOptions key={options.indexOf(option)} option={option} />) }
+      { options.map(option => <QuizOptions key={options.indexOf(option)} option={option} correctAnswer={correctAnswer} />) }
     </div>
   )
 }
