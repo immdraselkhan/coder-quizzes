@@ -1,24 +1,25 @@
 /*
 * Main layout
+* allTopics data coming route loader then sending to all components using ContextAPI (TopicsContext)
 */
 
-import React from 'react'
-import { Outlet } from 'react-router-dom';
+import React, { createContext } from 'react'
+import { Outlet, useLoaderData } from 'react-router-dom';
 import Footer from '../components/Footer';
-import Header from '../components/Header';
+import Header from '../components/Header/Header';
+
+export const TopicsContext = createContext([]);
 
 const Main = () => {
+  const allTopics = useLoaderData();
   return (
-    <>
-      {/* header  */}
+    <TopicsContext.Provider value={allTopics.data}>
       <Header />
-      {/* main */}
         <main>
           <Outlet />
         </main>
-      {/* footer */}
       <Footer />
-    </>
+    </TopicsContext.Provider>
   )
 }
 
