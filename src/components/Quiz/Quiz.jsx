@@ -38,7 +38,7 @@ const Quiz = () => {
           { questions.map(everyQuestion => <QuizCard key={everyQuestion.id} everyQuestion={everyQuestion} index={questions.indexOf(everyQuestion)} handleResult={handleResult} />) }
         </div>
         <div className="w-full lg:w-2/6 pt-5 lg:pt-[75px]">
-          <div className="text-white bg-[#5f49eb] p-10 space-y-10 rounded-lg sticky top-32">
+          <div className="text-white bg-[#5f49eb] p-6 py-10 lg:p-10 space-y-10 rounded-lg sticky top-32">
             <h2 className="text-xl font-bold text-center">Quiz Result</h2>
             <div className="space-y-5 text-lg font-medium">
               <p className="flex items-center gap-2"><CheckCircleIcon className="h-6 w-6 text-green-500 bg-white rounded-full"/>{showCorrectResults}</p>
