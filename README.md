@@ -2,7 +2,7 @@
 
 Simple quiz website, loading quizzes from an API. From home you can select topic, then simply answer the question. After complete the quiz will get the result.
 
-## Live Link
+## Live Site Link
 Hosted in Netlify -> [CoderQuizzes](https://coder-quizzes.netlify.app)
 
 ## React Vite
@@ -25,3 +25,6 @@ Documentation Link -> [Link](https://github.com/sweetalert2/sweetalert2-react-co
 
 ## React Hot Toast
 Documentation Link -> [Link](https://github.com/timolins/react-hot-toast)
+
+## Recharts
+Documentation Link -> [Link](https://recharts.org/en-US/guide)
