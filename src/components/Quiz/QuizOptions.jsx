@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import toast from 'react-hot-toast';
 
-const QuizOptions = ({option, correctAnswer, disableHandler}) => {
+const QuizOptions = ({option, correctAnswer, disableHandler, handleResult}) => {
 
   const [result, setResult] = useState('default');
 
@@ -9,10 +9,12 @@ const QuizOptions = ({option, correctAnswer, disableHandler}) => {
     if (answer === correctAnswer) {
       setResult(true);
       toast.success('Yaay! Correct Answer 👍');
+      handleResult(1, 0);
     }
     else {
       setResult(false);
-      toast.error("Opps! Wrong Answer 😔")
+      toast.error('Opps! Wrong Answer 😔');
+      handleResult(0, 1);
     }
   };
 

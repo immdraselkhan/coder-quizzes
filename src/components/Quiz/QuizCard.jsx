@@ -3,7 +3,7 @@ import { EyeIcon } from '@heroicons/react/24/solid';
 import QuizOptions from './QuizOptions';
 import { Toaster } from 'react-hot-toast';
 
-const QuizCard = ({everyQuestion, index}) => {
+const QuizCard = ({everyQuestion, index, handleResult}) => {
   const {question, options, correctAnswer} = everyQuestion;
 
   const [disable, setDisable] = useState(false);
@@ -19,7 +19,7 @@ const QuizCard = ({everyQuestion, index}) => {
         <EyeIcon className="h-10 w-10 cursor-pointer"/>
       </div>
       <div className={`space-y-5 ${disable ? disable : ''}`}>
-        { options.map(option => <QuizOptions key={options.indexOf(option)} option={option} correctAnswer={correctAnswer} disableHandler={disableHandler} />) }
+        { options.map(option => <QuizOptions key={options.indexOf(option)} option={option} correctAnswer={correctAnswer} disableHandler={disableHandler} handleResult={handleResult} />) }
         <Toaster />
       </div>
     </div>
