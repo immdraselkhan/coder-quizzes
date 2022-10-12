@@ -5,16 +5,18 @@
 */
 
 import { createBrowserRouter } from 'react-router-dom';
-import Blog from '../components/Blog';
+import Main from '../layouts/Main';
 import Home from '../components/Home';
 import Quiz from '../components/Quiz/Quiz';
 import Statistics from '../components/Statistics';
-import Main from '../layouts/Main';
+import Blog from '../components/Blog';
+import Error from '../components/Error';
 import { allTopics, topicQuiz } from '../loaders/getData';
 
 export const router = createBrowserRouter([
   {
     path: '/',
+    errorElement: <Error />,
     element: <Main />,
     loader: allTopics,
     children: [

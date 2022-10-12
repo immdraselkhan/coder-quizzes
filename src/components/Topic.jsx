@@ -1,3 +1,7 @@
+/*
+* Topic card
+*/
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -13,6 +17,6 @@ const Topic = ({topic}) => {
       </div>
     </div>
   )
-}
+};
 
 export default Topic;

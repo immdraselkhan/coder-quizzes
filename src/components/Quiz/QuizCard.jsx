@@ -1,3 +1,7 @@
+/*
+* Quiz card
+*/
+
 import React, { useState } from 'react';
 import { EyeIcon } from '@heroicons/react/24/solid';
 import QuizOptions from './QuizOptions';

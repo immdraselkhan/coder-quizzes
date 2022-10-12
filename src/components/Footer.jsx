@@ -1,4 +1,8 @@
-import React from 'react'
+/*
+* Footer component
+*/
+
+import React from 'react';
 import { CodeBracketIcon } from '@heroicons/react/24/solid';
 
 const Footer = () => {
@@ -39,6 +43,6 @@ const Footer = () => {
       </div>
     </footer>
   )
-}
+};
 
 export default Footer;

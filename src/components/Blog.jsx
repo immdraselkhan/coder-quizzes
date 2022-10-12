@@ -1,4 +1,8 @@
-import React from 'react'
+/*
+* Blog component
+*/
+
+import React from 'react';
 
 const Blog = () => {
   return (
