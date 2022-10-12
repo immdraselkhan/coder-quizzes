@@ -22,7 +22,7 @@ const Quiz = () => {
   const showCorrectResults = `Correct ${correctResults === 0 || correctResults === 1 ? 'Answer' : 'Answers'}: ${correctResults}`;
   const showWrongResults = `Wrong ${wrongResults === 0 || wrongResults === 1 ? 'Answer' : 'Answers'}: ${wrongResults}`;
 
-  if (correctResults + wrongResults === questions.length) {
+  if (correctResults + wrongResults === questions?.length) {
     Swal.fire (
       'Complete!',
       `<br>${showCorrectResults} <br><br> ${showWrongResults}`,

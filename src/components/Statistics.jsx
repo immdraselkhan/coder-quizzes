@@ -13,7 +13,7 @@ const Statistics = () => {
   const data = allTopics.map(topic => {return {name: topic.name, Questions: topic.total}});
 
   return (
-    <div className="max-w-2xl px-3 mx-auto my-40">
+    <div className="max-w-2xl mx-auto my-40">
       <div className="text-2xl lg:text-3xl font-bold text-center my-10">
         <h2>Total Questions Statistics</h2>
       </div>
