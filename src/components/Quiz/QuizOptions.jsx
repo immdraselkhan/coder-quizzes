@@ -1,38 +1,27 @@
 import React, { useState } from 'react';
-import toast, { Toaster } from 'react-hot-toast';
+import toast from 'react-hot-toast';
 
-const QuizOptions = ({option, correctAnswer}) => {
+const QuizOptions = ({option, correctAnswer, disableHandler}) => {
 
   const [result, setResult] = useState('default');
 
-  const quizHandle = answer => {
+  const quizHandler = answer => {
     if (answer === correctAnswer) {
       setResult(true);
-      toast.success('Correct Answer!');
-    }else {
-      setResult(false);
-      toast.error("Wrong Answer!")
+      toast.success('Yaay! Correct Answer 👍');
     }
-  }
-
- let img = '/default.svg';
- let answerStyle = 'bg-white';
- if (result === true) {
-  img = '/correct.svg';
-  answerStyle = 'bg-green-500 text-white';
- }
- if (result === false) {
-  img = '/wrong.svg';
-  answerStyle = 'bg-red-500 text-white';
- }
+    else {
+      setResult(false);
+      toast.error("Opps! Wrong Answer 😔")
+    }
+  };
 
   return (
-    <div onClick={() => quizHandle(option)} className={`${answerStyle} flex items-center p-1 rounded cursor-pointer`}>
-      <img className="w-10 h-10 rounded" src={img} alt="" />
+    <div onClick={() => {quizHandler(option); disableHandler()}} className={`${result === true ? 'bg-green-500 text-white' : (result === false ? 'bg-red-500 text-white' : 'bg-white')} flex items-center p-1 rounded cursor-pointer`}>
+      <img className="w-10 h-10 rounded" src={`${result === true ? '/correct.svg' : (result === false ? '/wrong.svg' : '/default.svg') }`} alt="" />
       <p className="m-auto">{option}</p>
-      <Toaster />
     </div>
   )
-}
+};
 
 export default QuizOptions;
