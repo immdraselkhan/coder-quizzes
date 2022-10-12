@@ -22,7 +22,7 @@ const QuizCard = ({everyQuestion, index, handleResult}) => {
   };
 
   return (
-    <div className="bg-[#5f49eb] px-6 py-10 lg:p-10 space-y-5 rounded-lg">
+    <div className="bg-[#5f49eb] card-padding space-y-5 rounded-lg">
       <div className="flex justify-between gap-5 pb-5 text-white">
         <p className="text-lg font-medium leading-8">Quiz {index+1}: {`${question.replace(/[<p></p>]/g, '')}`}</p>
         <div className="h-10 w-10">

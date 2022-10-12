@@ -15,3 +15,10 @@
     @apply pointer-events-none;
   }
 }
+
+/* Card Padding */
+@layer components {
+  .card-padding {
+    @apply px-6 py-10 lg:p-10;
+  }
+}

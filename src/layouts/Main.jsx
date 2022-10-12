@@ -21,6 +21,6 @@ const Main = () => {
       <Footer />
     </TopicsContext.Provider>
   )
-}
+};
 
 export default Main;
